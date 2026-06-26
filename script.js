@@ -11,14 +11,42 @@ const brandSlogans = ["Design is...", "Design is thinking", "Design is making", 
 let currentBrandText = "Design intern";
 let isHeaderCompact = false;
 let scrollTicking = false;
+let menuHideTimer = null;
 
 function setMenuOpen(isOpen) {
   if (!siteMenu || !menuButton) return;
 
-  siteMenu.classList.toggle("is-open", isOpen);
-  document.body.classList.toggle("menu-open", isOpen);
-  siteMenu.setAttribute("aria-hidden", String(!isOpen));
-  menuButton.setAttribute("aria-expanded", String(isOpen));
+  if (menuHideTimer) {
+    window.clearTimeout(menuHideTimer);
+    menuHideTimer = null;
+  }
+
+  if (isOpen) {
+    siteMenu.hidden = false;
+    siteMenu.setAttribute("aria-hidden", "false");
+    menuButton.setAttribute("aria-expanded", "true");
+    document.body.classList.add("menu-open");
+    window.requestAnimationFrame(() => {
+      siteMenu.classList.add("is-open");
+    });
+    return;
+  }
+
+  siteMenu.classList.remove("is-open");
+  siteMenu.setAttribute("aria-hidden", "true");
+  menuButton.setAttribute("aria-expanded", "false");
+  document.body.classList.remove("menu-open");
+  menuHideTimer = window.setTimeout(() => {
+    if (!siteMenu.classList.contains("is-open")) {
+      siteMenu.hidden = true;
+    }
+  }, 420);
+}
+
+if (siteMenu) {
+  siteMenu.hidden = true;
+  siteMenu.classList.remove("is-open");
+  siteMenu.setAttribute("aria-hidden", "true");
 }
 
 if (menuButton) {
