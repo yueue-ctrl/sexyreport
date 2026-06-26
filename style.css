@@ -614,9 +614,7 @@ h1 {
 .work-media {
   margin-top: 10px;
   overflow: hidden;
-  border: 1px solid var(--line);
   border-radius: 18px;
-  background: #0a0a0a;
 }
 
 .work-media img,
