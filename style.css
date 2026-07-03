@@ -505,6 +505,10 @@ h1 {
   border-bottom: 1px solid var(--line);
 }
 
+.report-table tr:last-child {
+  border-bottom: 0;
+}
+
 .report-table th,
 .report-table td {
   padding: 0 0 34px;
