@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Design Intern Weekly Report - week 7</title>
+    <title>Design Intern Weekly Report - week 9</title>
     <link rel="stylesheet" href="style.css?v=20260626-1710" />
   </head>
-  <body data-week="7">
+  <body data-week="9">
     <header class="site-header">
       <div class="brand" aria-label="实习生周悦">
         <span class="brand-line">Design intern</span>
@@ -20,9 +20,9 @@
       </div>
 
       <nav class="week-nav" aria-label="选择周报">
-        <a class="week-tab" href="week9.html" data-week="9">week 9</a>
+        <a class="week-tab is-active" href="week9.html" data-week="9" aria-current="page">week 9</a>
         <a class="week-tab" href="week8.html" data-week="8">week 8</a>
-        <a class="week-tab is-active" href="index.html" data-week="7" aria-current="page">week 7</a>
+        <a class="week-tab" href="index.html" data-week="7">week 7</a>
         <a class="week-tab" href="week6.html" data-week="6">week 6</a>
         <a class="week-tab" href="week5.html" data-week="5">week 5</a>
         <a class="week-tab" href="week4.html" data-week="4">week 4</a>
@@ -54,9 +54,9 @@
 
         <div class="menu-side">
           <nav class="menu-weeks" aria-label="周报菜单">
-            <a href="week9.html" data-week="9">week 9</a>
+            <a class="is-active" href="week9.html" data-week="9" aria-current="page">week 9</a>
             <a href="week8.html" data-week="8">week 8</a>
-            <a class="is-active" href="index.html" data-week="7" aria-current="page">week 7</a>
+            <a href="index.html" data-week="7">week 7</a>
             <a href="week6.html" data-week="6">week 6</a>
             <a href="week5.html" data-week="5">week 5</a>
             <a href="week4.html" data-week="4">week 4</a>
@@ -82,32 +82,25 @@
 
     <main>
       <section class="hero" aria-labelledby="week-title">
-        <p class="date-tag" id="date-range">[2026.06.22 - 2026.06.26]</p>
-        <h1 id="week-title">week 7</h1>
+        <p class="date-tag" id="date-range">[2026.07.06 - 2026.07.10]</p>
+        <h1 id="week-title">week 9</h1>
         <p class="hero-summary">
-          本周完成酷狗 AI 图标版设计，V22 页面延展，TME Hackathon 方案探索和歌词页动效探索，同时尝试用不同工具搭建设计工作流。
+          完善 Agent 聊天页动画表现，优化交互反馈节奏，增强智能感；完善基础歌词页动效，并探索创意歌词页设计；设计听歌彩蛋，通过歌词触发、点击互动等方式丰富听歌体验。
         </p>
       </section>
 
-      <section class="weekly-content" aria-label="第七周周报内容">
+      <section class="weekly-content" aria-label="第九周周报内容">
         <div class="report-block">
           <h2>成长性</h2>
           <table class="report-table">
             <tbody>
               <tr>
-                <th scope="row">IP图标化设计探索</th>
-                <td>酷狗 AI 线条版设计，提升 IP 在不同页面层级中的识别性与适配性，提高了对形象应用的能力。</td>
+                <th scope="row">歌词页动效：同步逻辑与开发流程</th>
+                <td>熟悉相关文件结构、歌词同步逻辑及整体开发流程，对歌词播放机制有了更系统的理解，能快速上手搭建网页。</td>
               </tr>
               <tr>
-                <th scope="row">好用 skills 收入囊中！搭建新工作流</th>
-                <td>
-                  通过Web to Figma 将之前网页端收藏的好的动效和排版复刻到 Figma中再设计，再用Figma to HTML 再搭建出网页，
-                  提升页面搭建与迭代效率，新版周报已用此方式快速跑通。
-                  <span class="tag-row resource-tags">
-                    <a href="https://github.com/Paidax01/web-to-figma" target="_blank" rel="noreferrer">Paidax01/web-to-figma</a>
-                    <a href="https://github.com/bernaferrari/FigmaToCode" target="_blank" rel="noreferrer">bernaferrari/FigmaToCode</a>
-                  </span>
-                </td>
+                <th scope="row">音画互动设计理解</th>
+                <td>加深了对音画互动设计的理解，能够从歌词、音乐与动效联动的角度思考体验设计。</td>
               </tr>
             </tbody>
           </table>
@@ -118,10 +111,8 @@
           <table class="report-table">
             <tbody>
               <tr>
-                <th scope="row">视觉系统一致性与延续</th>
-                <td>
-                  页面排版的基础元素的规范与延续能力还有待提高。需要整理视觉语言的统一性，更突出设计特点，同时还需大胆突破，做新创意。
-                </td>
+                <th scope="row">可读性与节奏控制</th>
+                <td>创意动效需要更加关注可读性与节奏控制，在保证视觉表现力的同时兼顾用户阅读体验。</td>
               </tr>
             </tbody>
           </table>
@@ -132,52 +123,57 @@
           <article class="work-item">
             <div class="part-row">
               <p class="part-label">Part1</p>
-              <span class="tag-row"><span>IP Design</span><span>Icon System</span></span>
+              <span class="tag-row"><span>Agent Motion</span><span>Interaction</span></span>
             </div>
-            <h3>酷狗 AI 图标版设计</h3>
-            <p>降低视觉干扰，提升多场景适配能力与画面协调性。</p>
+            <h3>Agent 聊天页思考中动画优化</h3>
+            <p>尝试多个方案优化交互反馈节奏，增强智能感。</p>
             <div class="work-media">
-              <img src="images/W7/1.png" alt="Part1 酷狗 AI 图标版设计展示图" loading="lazy" />
+              <video controls playsinline preload="metadata">
+                <source src="images/W9/1.mp4" type="video/mp4" />
+                你的浏览器暂不支持视频播放。
+              </video>
             </div>
           </article>
 
           <article class="work-item">
             <div class="part-row">
               <p class="part-label">Part2</p>
-              <span class="tag-row"><span>Visual Design</span><span>Page Extension</span></span>
+              <span class="tag-row"><span>Lyrics Motion</span><span>Creative</span></span>
             </div>
-            <h3>酷狗 V22 改版页面延展</h3>
-            <p>基于核心页面延展，进一步完善视觉系统，提升视觉语言统一性。</p>
+            <h3>基础歌词页动效与创意歌词页探索</h3>
+            <p>探索用于不同曲风的创意歌词页设计，以及基础歌词页的动态效果优化。</p>
+            <div class="work-media-grid">
+              <div class="work-media">
+                <video controls playsinline preload="metadata">
+                  <source src="images/W9/2.mp4" type="video/mp4" />
+                  你的浏览器暂不支持视频播放。
+                </video>
+              </div>
+              <div class="work-media">
+                <video controls playsinline preload="metadata">
+                  <source src="images/W9/3.mp4" type="video/mp4" />
+                  你的浏览器暂不支持视频播放。
+                </video>
+              </div>
+            </div>
             <div class="work-media">
-              <img src="images/W7/2.png" alt="Part2 酷狗 V22 改版页面延展展示图" loading="lazy" />
+              <video controls playsinline preload="metadata">
+                <source src="images/W9/4.mp4" type="video/mp4" />
+                你的浏览器暂不支持视频播放。
+              </video>
             </div>
           </article>
 
           <article class="work-item">
             <div class="part-row">
               <p class="part-label">Part3</p>
-              <span class="tag-row"><span>Product Concept</span><span>AI Experience</span></span>
+              <span class="tag-row"><span>Easter Egg</span><span>Interaction</span></span>
             </div>
-            <h3>更多探索</h3>
-            <p>参与腾讯音乐 AI Hackathon（赛题B），与另一位PM同学共同完成产品创新功能方案探索。</p>
-            <div class="read-more-copy">
-              <h4 class="project-title">车机端 AI 乐评播客</h4>
-              <p>
-                车载场景下用户听歌时不便查看屏幕，但仍希望获取歌曲乐评带来的情绪共鸣。目前行业仅提供乐评壁纸，
-                缺少适配车机的乐评形式。
-              </p>
-              <p>
-                本功能为车机原创 AI 能力，将优质乐评通过大模型整理改写，生成 3-5 分钟双人对谈式语音短播客，
-                实现免看屏收听；原曲可按需作为背景音，受版权与音频条件限制。
-              </p>
-              <p>
-                该功能复用现有 AI 播客能力，相比现有文本乐评总结、AI 伴听更垂直沉浸，同时提升产品竞争力，
-                丰富车企合作方案，助力商务推广。
-              </p>
-            </div>
+            <h3>歌词页彩蛋设计</h3>
+            <p>设计听歌彩蛋，通过歌词触发、点击互动等方式丰富听歌体验。</p>
             <div class="work-media">
               <video controls playsinline preload="metadata">
-                <source src="images/W7/3.mp4" type="video/mp4" />
+                <source src="images/W9/5.mp4" type="video/mp4" />
                 你的浏览器暂不支持视频播放。
               </video>
             </div>

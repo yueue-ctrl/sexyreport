@@ -74,7 +74,7 @@ document.addEventListener("keydown", (event) => {
 });
 
 if (siteMenu) {
-  siteMenu.querySelectorAll(".menu-primary a").forEach((link) => {
+  siteMenu.querySelectorAll(".menu-primary a[data-placeholder]").forEach((link) => {
     link.addEventListener("click", (event) => {
       event.preventDefault();
       showPlaceholder();
