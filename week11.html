@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Design Intern Weekly Report - week 10</title>
+    <title>Design Intern Weekly Report - week 11</title>
     <link rel="stylesheet" href="style.css?v=20260626-1710" />
   </head>
-  <body data-week="10">
+  <body data-week="11">
     <header class="site-header">
       <div class="brand" aria-label="实习生周悦">
         <span class="brand-line">Design intern</span>
@@ -20,8 +20,8 @@
       </div>
 
       <nav class="week-nav" aria-label="选择周报">
-        <a class="week-tab" href="week11.html" data-week="11">week 11</a>
-        <a class="week-tab is-active" href="week10.html" data-week="10" aria-current="page">week 10</a>
+        <a class="week-tab is-active" href="week11.html" data-week="11" aria-current="page">week 11</a>
+        <a class="week-tab" href="week10.html" data-week="10">week 10</a>
         <a class="week-tab" href="week9.html" data-week="9">week 9</a>
         <a class="week-tab" href="week8.html" data-week="8">week 8</a>
         <a class="week-tab" href="index.html" data-week="7">week 7</a>
@@ -49,15 +49,15 @@
         <nav class="menu-primary" aria-label="主菜单">
           <a href="#" data-placeholder="关于">关于</a>
           <a href="explore.html">探索</a>
-          <a href="week10.html">周报</a>
+          <a href="week11.html">周报</a>
         </nav>
 
         <div class="menu-arrow" aria-hidden="true">→</div>
 
         <div class="menu-side">
           <nav class="menu-weeks" aria-label="周报菜单">
-            <a href="week11.html" data-week="11">week 11</a>
-            <a class="is-active" href="week10.html" data-week="10" aria-current="page">week 10</a>
+            <a class="is-active" href="week11.html" data-week="11" aria-current="page">week 11</a>
+            <a href="week10.html" data-week="10">week 10</a>
             <a href="week9.html" data-week="9">week 9</a>
             <a href="week8.html" data-week="8">week 8</a>
             <a href="index.html" data-week="7">week 7</a>
@@ -86,25 +86,25 @@
 
     <main>
       <section class="hero" aria-labelledby="week-title">
-        <p class="date-tag" id="date-range">[2026.07.13 - 2026.07.17]</p>
-        <h1 id="week-title">week 10</h1>
+        <p class="date-tag" id="date-range">[2026.07.20 - 2026.07.24]</p>
+        <h1 id="week-title">week 11</h1>
         <p class="hero-summary">
-          优化歌词页动画效果，完善 Agent 思考中与卡片展开时的智能变色交互效果。
+          调整 Agent 动画格式，处理透明底色问题，完成动画交付。首页改版中新 Agent 搜索框动画设计与任务保活动画制作。
         </p>
       </section>
 
-      <section class="weekly-content" aria-label="第十周周报内容">
+      <section class="weekly-content" aria-label="第十一周周报内容">
         <div class="report-block">
           <h2>成长性</h2>
           <table class="report-table">
             <tbody>
               <tr>
-                <th scope="row">Agent 动画生成流程</th>
-                <td>更准确地规划静态画面，同时将动画拆分为可衔接的多个阶段，提升整体 AI 制作效率和复用性。</td>
+                <th scope="row">动画交付流程</th>
+                <td>熟悉了动画交付流程，对透明底素材、格式兼容等细节有了更多经验。</td>
               </tr>
               <tr>
-                <th scope="row">产品认知</th>
-                <td>在参与和产品一起的改版讨论过程中，对产品定位、与竞品的差异以及当前存在的问题有了更深入的认识，同时也学习了很多汇报的逻辑和思路。</td>
+                <th scope="row">产品动效设计</th>
+                <td>加深了对产品动效设计的理解，能够结合业务场景思考动画反馈和体验。</td>
               </tr>
             </tbody>
           </table>
@@ -115,8 +115,8 @@
           <table class="report-table">
             <tbody>
               <tr>
-                <th scope="row">开发兼容性与渐变检查</th>
-                <td>提交开发的动画仍存在兼容性和颜色渐变边缘处理的问题，导致返工。后续提交前将逐一检查测试，避免返工。</td>
+                <th scope="row">动画细节把控</th>
+                <td>提升动画细节把控能力，加强节奏、缓动和视觉表现的优化。</td>
               </tr>
             </tbody>
           </table>
@@ -127,43 +127,35 @@
           <article class="work-item">
             <div class="part-row">
               <p class="part-label">Part1</p>
-              <span class="tag-row"><span>Agent Motion</span><span>Color Feedback</span></span>
+              <span class="tag-row"><span>Agent Animation</span><span>Deliverable</span></span>
             </div>
-            <h3>Agent 思考中动画</h3>
-            <p> 产品希望通过旋转来表现思考状态，同时搭配思考完成的星星效果（右侧为持续思考的状态）。</p>
-            <div class="work-media-grid">
-              <div class="work-media">
-                <video controls playsinline preload="metadata">
-                  <source src="images/W10/01.mov" />
-                  你的浏览器暂不支持视频播放。
-                </video>
-              </div>
-              <div class="work-media">
-                <video controls playsinline preload="metadata">
-                  <source src="images/W10/0.mov" />
-                  你的浏览器暂不支持视频播放。
-                </video>
-              </div>
+            <h3>Agent 卡片发光动画与交付</h3>
+            <p>调整 Agent 动画格式，处理透明底色问题，完成动画交付。</p>
+            <div class="work-media">
+              <video controls playsinline preload="metadata">
+                <source src="images/W11/1.mp4" type="video/mp4" />
+                你的浏览器暂不支持视频播放。
+              </video>
             </div>
           </article>
 
           <article class="work-item">
             <div class="part-row">
               <p class="part-label">Part2</p>
-              <span class="tag-row"><span>Lyrics Motion</span><span>Animation</span></span>
+              <span class="tag-row"><span>Search Box</span><span>Animation</span></span>
             </div>
-            <h3>Agent卡片展开智能变色</h3>
-           
+            <h3>改版新 Agent 搜索框动画</h3>
+            <p>首页改版中新 Agent 搜索框动画设计与制作。</p>
             <div class="work-media-grid">
               <div class="work-media">
                 <video controls playsinline preload="metadata">
-                  <source src="images/W10/1.mp4" type="video/mp4" />
+                  <source src="images/W11/2-1.mp4" type="video/mp4" />
                   你的浏览器暂不支持视频播放。
                 </video>
               </div>
               <div class="work-media">
                 <video controls playsinline preload="metadata">
-                  <source src="images/W10/2.mp4" type="video/mp4" />
+                  <source src="images/W11/2-2.mp4" type="video/mp4" />
                   你的浏览器暂不支持视频播放。
                 </video>
               </div>
@@ -173,19 +165,20 @@
           <article class="work-item">
             <div class="part-row">
               <p class="part-label">Part3</p>
-              <span class="tag-row"><span>Product Thinking</span><span>Discussion</span></span>
+              <span class="tag-row"><span>Task Activity</span><span>Animation</span></span>
             </div>
-            <h3>优化歌词页动画效果，更新ui与背景颜色调整。</h3>
+            <h3>任务保活动画</h3>
+            <p>任务保活动画制作。</p>
             <div class="work-media-grid">
               <div class="work-media">
                 <video controls playsinline preload="metadata">
-                  <source src="images/W10/3.mp4" type="video/mp4" />
+                  <source src="images/W11/3-1.mp4" type="video/mp4" />
                   你的浏览器暂不支持视频播放。
                 </video>
               </div>
               <div class="work-media">
                 <video controls playsinline preload="metadata">
-                  <source src="images/W10/4.mp4" type="video/mp4" />
+                  <source src="images/W11/3-2.mp4" type="video/mp4" />
                   你的浏览器暂不支持视频播放。
                 </video>
               </div>
