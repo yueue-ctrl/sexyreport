@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Design Intern Weekly Report - week 9</title>
-    <link rel="stylesheet" href="style.css?v=20260626-1710" />
+    <title>Design Intern Weekly Report - week 13</title>
+    <link rel="stylesheet" href="style.css?v=20260807-1313" />
   </head>
-  <body data-week="9">
+  <body data-week="13">
     <header class="site-header">
       <div class="brand" aria-label="实习生周悦">
         <span class="brand-line">Design intern</span>
@@ -20,11 +20,11 @@
       </div>
 
       <nav class="week-nav" aria-label="选择周报">
-        <a class="week-tab" href="week13.html" data-week="13">week 13</a>
+        <a class="week-tab is-active" href="week13.html" data-week="13" aria-current="page">week 13</a>
         <a class="week-tab" href="week12.html" data-week="12">week 12</a>
         <a class="week-tab" href="week11.html" data-week="11">week 11</a>
         <a class="week-tab" href="week10.html" data-week="10">week 10</a>
-        <a class="week-tab is-active" href="week9.html" data-week="9" aria-current="page">week 9</a>
+        <a class="week-tab" href="week9.html" data-week="9">week 9</a>
         <a class="week-tab" href="week8.html" data-week="8">week 8</a>
         <a class="week-tab" href="index.html" data-week="7">week 7</a>
         <a class="week-tab" href="week6.html" data-week="6">week 6</a>
@@ -58,11 +58,11 @@
 
         <div class="menu-side">
           <nav class="menu-weeks" aria-label="周报菜单">
-            <a href="week13.html" data-week="13">week 13</a>
+            <a class="is-active" href="week13.html" data-week="13" aria-current="page">week 13</a>
             <a href="week12.html" data-week="12">week 12</a>
             <a href="week11.html" data-week="11">week 11</a>
             <a href="week10.html" data-week="10">week 10</a>
-            <a class="is-active" href="week9.html" data-week="9" aria-current="page">week 9</a>
+            <a href="week9.html" data-week="9">week 9</a>
             <a href="week8.html" data-week="8">week 8</a>
             <a href="index.html" data-week="7">week 7</a>
             <a href="week6.html" data-week="6">week 6</a>
@@ -90,25 +90,24 @@
 
     <main>
       <section class="hero" aria-labelledby="week-title">
-        <p class="date-tag" id="date-range">[2026.07.06 - 2026.07.10]</p>
-        <h1 id="week-title">week 9</h1>
+        <p class="date-tag" id="date-range">[2026.08.03 - 2026.08.07]</p>
+        <h1 id="week-title">week 13</h1>
         <p class="hero-summary">
-          完善 Agent 聊天页动画表现，优化交互反馈节奏，增强智能感；完善基础歌词页动效，并探索创意歌词页设计；设计听歌彩蛋，通过歌词触发、点击互动等方式丰富听歌体验。
+          制作新的 Agent 思考中动画，延续 PC 端创意歌词页以及开始制作 PC 端宣推的概念方案。
         </p>
       </section>
 
-      <section class="weekly-content" aria-label="第九周周报内容">
+      <section class="weekly-content" aria-label="第十三周周报内容">
         <div class="report-block">
           <h2>成长性</h2>
           <table class="report-table">
             <tbody>
               <tr>
-                <th scope="row">歌词页动效：同步逻辑与开发流程</th>
-                <td>熟悉相关文件结构、歌词同步逻辑及整体开发流程，对歌词播放机制有了更系统的理解，能快速上手搭建网页。</td>
-              </tr>
-              <tr>
-                <th scope="row">音画互动设计理解</th>
-                <td>加深了对音画互动设计的理解，能够从歌词、音乐与动效联动的角度思考体验设计。</td>
+                <th scope="row">宣推设计</th>
+                <td>
+                  在 H5 宣推设计中，理解宣推页面需要更直接地突出重点、吸引用户；同时练习了不少
+                  Figma 图形画法，对图形搭建效率与图形语言表达都有提升。
+                </td>
               </tr>
             </tbody>
           </table>
@@ -119,8 +118,10 @@
           <table class="report-table">
             <tbody>
               <tr>
-                <th scope="row">可读性与节奏控制</th>
-                <td>创意动效需要更加关注可读性与节奏控制，在保证视觉表现力的同时兼顾用户阅读体验。</td>
+                <th scope="row">画面表现偏保守</th>
+                <td>
+                  目前宣推画面仍不够丰富，视觉冲击力偏弱；后续需要尝试更热闹、更抓眼的排版与图形表现，提升第一眼吸引力。
+                </td>
               </tr>
             </tbody>
           </table>
@@ -131,59 +132,63 @@
           <article class="work-item">
             <div class="part-row">
               <p class="part-label">Part1</p>
-              <span class="tag-row"><span>Agent Motion</span><span>Interaction</span></span>
+              <span class="tag-row"><span>Agent Motion</span><span>Thinking State</span></span>
             </div>
-            <h3>Agent 聊天页思考中动画优化</h3>
-            <p>尝试多个方案优化交互反馈节奏，增强智能感。</p>
-            <div class="work-media">
-              <video controls playsinline preload="metadata">
-                <source src="images/W9/1.mp4" type="video/mp4" />
-                你的浏览器暂不支持视频播放。
-              </video>
+            <h3>Agent 思考中新动画制作</h3>
+            <div class="work-media-grid">
+              <div class="work-media">
+                <video controls playsinline preload="metadata">
+                  <source src="images/W13/1.mov" />
+                  你的浏览器暂不支持视频播放。
+                </video>
+              </div>
+              <div class="work-media">
+                <video controls playsinline preload="metadata">
+                  <source src="images/W13/2.mov" />
+                  你的浏览器暂不支持视频播放。
+                </video>
+              </div>
             </div>
           </article>
 
           <article class="work-item">
             <div class="part-row">
               <p class="part-label">Part2</p>
-              <span class="tag-row"><span>Lyrics Motion</span><span>Creative</span></span>
+              <span class="tag-row"><span>Creative Lyrics</span><span>PC Concept</span></span>
             </div>
-            <h3>基础歌词页动效与创意歌词页探索</h3>
-            <p>探索用于不同曲风的创意歌词页设计，以及基础歌词页的动态效果优化。</p>
-            <div class="work-media-grid">
+            <h3>PC 端创意歌词页延续</h3>
+            <div class="work-media-stack">
               <div class="work-media">
                 <video controls playsinline preload="metadata">
-                  <source src="images/W9/2.mp4" type="video/mp4" />
+                  <source src="images/W13/3.mp4" type="video/mp4" />
                   你的浏览器暂不支持视频播放。
                 </video>
               </div>
               <div class="work-media">
                 <video controls playsinline preload="metadata">
-                  <source src="images/W9/3.mp4" type="video/mp4" />
+                  <source src="images/W13/4.mp4" type="video/mp4" />
                   你的浏览器暂不支持视频播放。
                 </video>
               </div>
-            </div>
-            <div class="work-media">
-              <video controls playsinline preload="metadata">
-                <source src="images/W9/4.mp4" type="video/mp4" />
-                你的浏览器暂不支持视频播放。
-              </video>
             </div>
           </article>
 
           <article class="work-item">
             <div class="part-row">
               <p class="part-label">Part3</p>
-              <span class="tag-row"><span>Easter Egg</span><span>Interaction</span></span>
+              <span class="tag-row"><span>H5 Promotion</span><span>PC Concept</span></span>
             </div>
-            <h3>歌词页彩蛋设计</h3>
-            <p>设计听歌彩蛋，通过歌词触发、点击互动等方式丰富听歌体验。</p>
-            <div class="work-media">
-              <video controls playsinline preload="metadata">
-                <source src="images/W9/5.mp4" type="video/mp4" />
-                你的浏览器暂不支持视频播放。
-              </video>
+            <h3>PC 端宣推概念方案起步</h3>
+            <div class="work-media-grid">
+              <div class="work-media">
+                <img src="images/W13/5.png" alt="PC 端宣推概念方案 1" />
+              </div>
+              <div class="work-media">
+                <img src="images/W13/6.png" alt="PC 端宣推概念方案 2" />
+              </div>
+              <div class="work-media">
+                <img src="images/W13/7.png" alt="PC 端宣推概念方案 3" />
+              </div>
             </div>
           </article>
         </div>
@@ -217,6 +222,6 @@
       </div>
     </footer>
 
-    <script src="script.js?v=20260626-1710"></script>
+    <script src="script.js?v=20260807-1313"></script>
   </body>
 </html>
