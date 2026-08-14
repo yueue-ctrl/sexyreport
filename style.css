@@ -825,6 +825,10 @@ h1 {
   margin-top: 10px;
 }
 
+.work-media-grid-three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .work-media-stack {
   display: grid;
   grid-template-columns: minmax(0, 1fr);

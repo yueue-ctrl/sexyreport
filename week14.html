@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Design Intern Weekly Report - week 2</title>
-    <link rel="stylesheet" href="style.css?v=20260626-1710" />
+    <title>Design Intern Weekly Report - week 14</title>
+    <link rel="stylesheet" href="style.css?v=20260814-1414" />
   </head>
-  <body data-week="2">
+  <body data-week="14">
     <header class="site-header">
       <div class="brand" aria-label="实习生周悦">
         <span class="brand-line">Design intern</span>
@@ -20,7 +20,7 @@
       </div>
 
       <nav class="week-nav" aria-label="选择周报">
-        <a class="week-tab" href="week14.html" data-week="14">week 14</a>
+        <a class="week-tab is-active" href="week14.html" data-week="14" aria-current="page">week 14</a>
         <a class="week-tab" href="week13.html" data-week="13">week 13</a>
         <a class="week-tab" href="week12.html" data-week="12">week 12</a>
         <a class="week-tab" href="week11.html" data-week="11">week 11</a>
@@ -32,7 +32,7 @@
         <a class="week-tab" href="week5.html" data-week="5">week 5</a>
         <a class="week-tab" href="week4.html" data-week="4">week 4</a>
         <a class="week-tab" href="week3.html" data-week="3">week 3</a>
-        <a class="week-tab is-active" href="week2.html" data-week="2" aria-current="page">week 2</a>
+        <a class="week-tab" href="week2.html" data-week="2">week 2</a>
         <a class="week-tab" href="week1.html" data-week="1">week 1</a>
       </nav>
 
@@ -59,7 +59,7 @@
 
         <div class="menu-side">
           <nav class="menu-weeks" aria-label="周报菜单">
-            <a href="week14.html" data-week="14">week 14</a>
+            <a class="is-active" href="week14.html" data-week="14" aria-current="page">week 14</a>
             <a href="week13.html" data-week="13">week 13</a>
             <a href="week12.html" data-week="12">week 12</a>
             <a href="week11.html" data-week="11">week 11</a>
@@ -71,7 +71,7 @@
             <a href="week5.html" data-week="5">week 5</a>
             <a href="week4.html" data-week="4">week 4</a>
             <a href="week3.html" data-week="3">week 3</a>
-            <a class="is-active" href="week2.html" data-week="2" aria-current="page">week 2</a>
+            <a href="week2.html" data-week="2">week 2</a>
             <a href="week1.html" data-week="1">week 1</a>
           </nav>
 
@@ -92,11 +92,85 @@
 
     <main>
       <section class="hero" aria-labelledby="week-title">
-        <p class="date-tag" id="date-range">[2026.05.18 - 2026.05.22]</p>
-        <h1 id="week-title">week 2</h1>
-        <p class="hero-summary">内容正在搬运中，或前往<a href="https://yuezhou.netlify.app/" target="_blank" rel="noreferrer">旧网站</a>查看。</p>
+        <p class="date-tag" id="date-range">[2026.08.12 - 2026.08.14]</p>
+        <h1 id="week-title">week 14</h1>
+        <p class="hero-summary">
+          解决魔法色叠加后 Agent 形象发灰、显脏的问题，并探索线性 Icon 到 Agent 形象的转换动画。
+        </p>
       </section>
 
+      <section class="weekly-content" aria-label="第十四周周报内容">
+        <div class="report-block">
+          <h2>成长性</h2>
+          <table class="report-table">
+            <tbody>
+              <tr>
+                <th scope="row">形态转场</th>
+                <td>用跳动、转身等动作衔接 Icon 与 Agent 形象，并让 Icon 动态与角色运动相呼应，使转场更自然。</td>
+              </tr>
+              <tr>
+                <th scope="row">Shader 魔法色探索</th>
+                <td>
+                  GradLab 让我联想到之前的魔法色实践：相比手动配色，Shader 可提取专辑色并通过参数控制效果，适合延展至播放页、切歌等场景。
+                  <span class="tag-row resource-tags">
+                    <a href="https://www.gradlab.app/" target="_blank" rel="noreferrer">GradLab</a>
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="report-block work-list">
+          <h2>本周工作</h2>
+          <article class="work-item">
+            <div class="part-row">
+              <p class="part-label">Part1</p>
+              <span class="tag-row"><span>Agent Visual</span><span>Agent Motion</span></span>
+            </div>
+            <h3>Agent 魔法色适配与形象转换动画</h3>
+            <p>
+              针对魔法色叠加后 Agent 形象发灰、显脏的问题，重新梳理色彩叠加与明度关系，优化整体的通透感与视觉洁净度。
+            </p>
+            <div class="work-media">
+              <video controls playsinline preload="metadata">
+                <source src="images/W14/头部文字链bg_6.mp4" type="video/mp4" />
+                你的浏览器暂不支持视频播放。
+              </video>
+            </div>
+            <div class="work-media-grid work-media-grid-three">
+              <div class="work-media">
+                <video controls playsinline preload="metadata">
+                  <source src="images/W14/保活小狗来救场2.mp4" type="video/mp4" />
+                  你的浏览器暂不支持视频播放。
+                </video>
+              </div>
+              <div class="work-media">
+                <video controls playsinline preload="metadata">
+                  <source src="images/W14/翻牌两次.mp4" type="video/mp4" />
+                  你的浏览器暂不支持视频播放。
+                </video>
+              </div>
+              <div class="work-media">
+                <video controls playsinline preload="metadata">
+                  <source src="images/W14/拉伸线条.mp4" type="video/mp4" />
+                  你的浏览器暂不支持视频播放。
+                </video>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="placeholder-content" aria-live="polite" hidden>
+        <div class="placeholder-panel">
+          <p>
+            内容正在搬运中，或前往
+            <a href="https://yuezhou.netlify.app/" target="_blank" rel="noreferrer">旧网站</a>
+            查看
+          </p>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
@@ -116,6 +190,6 @@
       </div>
     </footer>
 
-    <script src="script.js?v=20260626-1710"></script>
+    <script src="script.js?v=20260814-1414"></script>
   </body>
 </html>
