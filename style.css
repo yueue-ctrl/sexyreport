@@ -535,7 +535,7 @@ h1 {
 
 .timeline-table {
   width: 100%;
-  min-width: 1240px;
+  min-width: 1780px;
   border-collapse: collapse;
   table-layout: fixed;
 }
@@ -550,6 +550,22 @@ h1 {
 
 .timeline-table th:first-child {
   width: 180px;
+}
+
+/* Keep the growth labels visible while the weekly timeline scrolls horizontally. */
+.timeline-table thead th:first-child,
+.timeline-table tbody th {
+  position: sticky;
+  left: 0;
+}
+
+.timeline-table thead th:first-child {
+  z-index: 3;
+}
+
+.timeline-table tbody th {
+  z-index: 2;
+  box-shadow: 10px 0 14px -14px rgba(0, 0, 0, 0.9);
 }
 
 .timeline-table thead th {
@@ -638,7 +654,7 @@ h1 {
 
 .growth-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 18px;
 }
 
@@ -1165,7 +1181,7 @@ body.placeholder-page .site-footer {
   }
 
   .timeline-table {
-    min-width: 1060px;
+    min-width: 1640px;
   }
 
   .timeline-table th:first-child {
