@@ -51,7 +51,7 @@ a {
   position: fixed;
   z-index: 20;
   inset: 0 0 auto;
-  height: 214px;
+  height: 260px;
   display: grid;
   grid-template-columns: minmax(180px, 260px) minmax(0, 1fr) 120px;
   grid-template-areas: "brand . menu";
@@ -105,12 +105,14 @@ a {
   top: 164px;
   left: 18px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
-  gap: clamp(24px, 6vw, 80px);
+  width: calc(100vw - 36px);
+  column-gap: clamp(18px, 3vw, 48px);
+  row-gap: 8px;
   opacity: 1;
   transform: translate3d(0, 0, 0);
   transition: opacity 160ms ease, transform 220ms ease, visibility 0ms linear 0ms;
-  white-space: nowrap;
   will-change: opacity, transform;
 }
 
@@ -149,6 +151,7 @@ a {
 
 .week-tab {
   display: inline-flex;
+  flex: 0 0 auto;
   align-items: center;
   justify-content: center;
   min-width: 64px;
@@ -1002,7 +1005,7 @@ body.placeholder-page .site-footer {
 @media (max-width: 760px) {
   .site-header {
     position: fixed;
-    height: 252px;
+    height: 350px;
     grid-template-columns: 1fr auto;
     grid-template-areas: "brand menu";
     gap: 16px;
@@ -1023,23 +1026,19 @@ body.placeholder-page .site-footer {
   }
 
   .week-nav {
-    top: 194px;
+    top: 188px;
     left: 20px;
     width: calc(100vw - 40px);
     justify-content: flex-start;
-    gap: 22px;
-    overflow-x: auto;
+    column-gap: 18px;
+    row-gap: 8px;
+    overflow: visible;
     transform: translate3d(0, 0, 0);
-    scrollbar-width: none;
   }
 
   .site-header.is-compact .intern-info,
   .site-header.is-compact .week-nav {
     transform: translate3d(0, -18px, 0);
-  }
-
-  .week-nav::-webkit-scrollbar {
-    display: none;
   }
 
   .week-tab {
