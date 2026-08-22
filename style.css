@@ -517,6 +517,87 @@ h1 {
   line-height: 1.56;
 }
 
+.timeline-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: -54px;
+  padding: 16px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: #0a0a0a;
+}
+
+.timeline-toolbar-kicker {
+  margin-bottom: 5px;
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.timeline-toolbar-note {
+  color: #bdbdbd;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.thumbnail-toggle {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  border: 0;
+  border-radius: 999px;
+  padding: 0 10px 0 18px;
+  background: #fff;
+  color: #090909;
+  cursor: pointer;
+  font: inherit;
+}
+
+.thumbnail-toggle-label {
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.thumbnail-toggle-track {
+  position: relative;
+  width: 42px;
+  height: 26px;
+  border-radius: 999px;
+  background: #c7c7c7;
+  transition: background-color 180ms ease;
+}
+
+.thumbnail-toggle-track span {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  transition: transform 180ms ease;
+}
+
+.thumbnail-toggle[aria-checked="true"] .thumbnail-toggle-track {
+  background: var(--accent);
+}
+
+.thumbnail-toggle[aria-checked="true"] .thumbnail-toggle-track span {
+  transform: translateX(16px);
+}
+
+.thumbnail-toggle:hover,
+.thumbnail-toggle:focus-visible {
+  background: #f2f2f2;
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
 .timeline-board {
   width: 100%;
   min-width: 0;
@@ -571,7 +652,7 @@ h1 {
 .timeline-table thead th {
   height: 58px;
   padding: 0 16px;
-  background: #d83291;
+  background: #050505;
   color: #fff;
   font-size: clamp(18px, 1.8vw, 26px);
   font-weight: 800;
@@ -634,6 +715,55 @@ h1 {
   font-size: clamp(13px, 0.96vw, 15px);
   font-weight: 800;
   line-height: 1.28;
+}
+
+.timeline-thumbnail {
+  display: none;
+  width: 100%;
+  height: 100%;
+  min-height: 82px;
+  object-fit: contain;
+  object-position: center;
+  background: #000;
+}
+
+.timeline-table.is-thumbnail-mode tbody td {
+  height: 146px;
+}
+
+.timeline-table.is-thumbnail-mode .timeline-bar {
+  height: 118px;
+  min-height: 118px;
+  background-image: radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.23), transparent 28%);
+}
+
+.timeline-table.is-thumbnail-mode .timeline-bar.has-thumbnail {
+  display: block;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: #000;
+  background-image: none;
+}
+
+.timeline-table.is-thumbnail-mode .timeline-bar.has-thumbnail strong {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.timeline-table.is-thumbnail-mode .timeline-thumbnail {
+  display: block;
+}
+
+/* The Vibe coding row keeps its text-only items neutral; media cards remain visual. */
+.timeline-text-row .timeline-bar:not([data-thumbnail]) {
+  background: #050505;
+  border-color: rgba(255, 255, 255, 0.22);
 }
 
 .bar-pink {
@@ -1170,6 +1300,18 @@ body.placeholder-page .site-footer {
   .explore-content {
     gap: 64px;
     padding-bottom: 80px;
+  }
+
+  .timeline-toolbar {
+    align-items: flex-start;
+    margin-bottom: -48px;
+    padding: 14px;
+  }
+
+  .timeline-toolbar-note {
+    max-width: 170px;
+    font-size: 12px;
+    line-height: 1.35;
   }
 
   .explore-headline h2 {

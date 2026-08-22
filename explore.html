@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Design Intern Weekly Report - summary</title>
-    <link rel="stylesheet" href="style.css?v=20260821-explore15" />
+    <link rel="stylesheet" href="style.css?v=20260822-thumbnails" />
   </head>
   <body data-page="explore">
     <header class="site-header">
@@ -97,17 +97,34 @@
         <p class="date-tag">[2026.05.11 - 2026.08.21]</p>
         <h1 id="explore-title">总结</h1>
         <p class="hero-summary">
-          汇总 week 1-15 的项目与成长变化，呈现从品牌认知、动效链路到 Agent、歌词页与工具搭建的能力沉淀。
+          按项目汇总 week 1-15 的设计产出，串联 AI Agent、V22、歌词页魔法色、播放器、PC 端与 Vibe coding 的探索和落地。
         </p>
       </section>
 
       <section class="explore-content" aria-label="十五周总结总览">
+        <div class="timeline-toolbar">
+          <div>
+            <p class="timeline-toolbar-kicker">VIEW MODE</p>
+            <p class="timeline-toolbar-note" id="thumbnail-mode-note">按项目归类；开启后每个 Part 展示一张代表图</p>
+          </div>
+          <button
+            class="thumbnail-toggle"
+            id="thumbnail-toggle"
+            type="button"
+            role="switch"
+            aria-checked="false"
+            aria-describedby="thumbnail-mode-note"
+          >
+            <span class="thumbnail-toggle-label">缩略图</span>
+            <span class="thumbnail-toggle-track" aria-hidden="true"><span></span></span>
+          </button>
+        </div>
         <div class="timeline-board" aria-label="周项目时间轴">
           <div class="timeline-scroll">
             <table class="timeline-table">
               <thead>
                 <tr>
-                  <th scope="col">成长线索</th>
+                  <th scope="col">项目类型</th>
                   <th scope="col">W1</th>
                   <th scope="col">W2</th>
                   <th scope="col">W3</th>
@@ -127,195 +144,169 @@
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">品牌与行业认知</th>
-                  <td colspan="2">
-                    <a class="timeline-bar bar-pink" href="week1.html">
-                      <strong>酷狗品牌理解 / AI Agent 案例观察 / 音乐产品调研</strong>
-                    </a>
-                  </td>
-                  <td colspan="13"></td>
-                </tr>
-                <tr>
-                  <th scope="row">动效链路与研发协作</th>
-                  <td colspan="2"></td>
-                  <td colspan="2">
-                    <a class="timeline-bar bar-blue" href="week3.html">
-                      <strong>AE 抠像 / 透明序列帧 / PAG 导出 / 页面改版跟进</strong>
-                    </a>
-                  </td>
-                  <td colspan="6"></td>
-                  <td colspan="2">
-                    <a class="timeline-bar bar-blue" href="week11.html">
-                      <strong>动画格式调整 / 透明底兼容 / PAG 重新交付</strong>
-                    </a>
-                  </td>
-                  <td colspan="2">
-                    <a class="timeline-bar bar-violet" href="week13.html">
-                      <strong>思考中动画 / 线性 Icon 转 Agent 形象</strong>
+                  <th scope="row">Agent形象/动画</th>
+                  <td>
+                    <a class="timeline-bar bar-pink" href="week1.html" data-thumbnail="images/前六周缩略图/W1/Screenshot 2026-08-22 at 23.44.21.png" data-thumbnail-type="image">
+                      <strong>AI Agent 创新形式 / IP 设计探索</strong>
                     </a>
                   </td>
                   <td>
-                    <a class="timeline-bar bar-pink" href="week15.html">
-                      <strong>小狗 Icon 转彩色演示</strong>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">视觉系统与版式能力</th>
-                  <td colspan="4"></td>
-                  <td colspan="2">
-                    <a class="timeline-bar bar-green" href="week5.html">
-                      <strong>UI 视觉系统 / 网格层级 / 灰面控制 / 组件复用</strong>
+                    <a class="timeline-bar bar-violet" href="week2.html" data-thumbnail="images/前六周缩略图/W2/Part1.png" data-thumbnail-type="image">
+                      <strong>AI Agent 形象动态方案</strong>
                     </a>
                   </td>
                   <td>
-                    <a class="timeline-bar bar-pink" href="index.html">
-                      <strong>酷狗 V22 改版页面延展</strong>
+                    <a class="timeline-bar bar-blue" href="week3.html" data-thumbnail="images/前六周缩略图/W3/Screenshot 2026-08-22 at 23.42.24.png" data-thumbnail-type="image">
+                      <strong>AI Agent IP 延展 / 科技光子概念</strong>
+                    </a>
+                  </td>
+                  <td>
+                    <a class="timeline-bar bar-blue" href="week4.html" data-thumbnail="images/前六周缩略图/W4/Screenshot 2026-08-22 at 23.40.56.png" data-thumbnail-type="image">
+                      <strong>AI Agent 入口图标</strong>
                     </a>
                   </td>
                   <td colspan="2"></td>
                   <td>
-                    <a class="timeline-bar bar-green" href="week10.html">
-                      <strong>歌词页 UI 与背景颜色调整</strong>
-                    </a>
-                  </td>
-                  <td colspan="2"></td>
-                  <td>
-                    <a class="timeline-bar bar-green" href="week13.html">
-                      <strong>PC 端宣推概念方案</strong>
-                    </a>
-                  </td>
-                  <td colspan="2">
-                    <a class="timeline-bar bar-pink" href="week15.html">
-                      <strong>魔法色适配 / 播放页应用演示</strong>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">Agent / AI 角色体验</th>
-                  <td colspan="2">
-                    <a class="timeline-bar bar-violet" href="week2.html">
-                      <strong>AI Agent 形象与交互参考</strong>
-                    </a>
-                  </td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>
-                    <a class="timeline-bar bar-pink" href="index.html">
+                    <a class="timeline-bar bar-pink" href="index.html" data-thumbnail="images/W7/1.png" data-thumbnail-type="image">
                       <strong>酷狗 AI 图标版设计</strong>
                     </a>
                   </td>
-                  <td colspan="2">
-                    <a class="timeline-bar bar-blue" href="week8.html">
-                      <strong>酷狗 Agent 图形 / 聊天页动画优化</strong>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    <a class="timeline-bar bar-pink" href="week10.html" data-thumbnail="images/W10/01.mov" data-thumbnail-type="video">
+                      <strong>思考中动画 / 卡片智能变色</strong>
                     </a>
                   </td>
                   <td>
-                    <a class="timeline-bar bar-pink" href="week10.html">
-                      <strong>思考中动画 / 卡片展开智能变色</strong>
+                    <a class="timeline-bar bar-blue" href="week11.html" data-thumbnail="images/W11/1.mp4" data-thumbnail-type="video">
+                      <strong>Agent 卡片发光动画</strong>
                     </a>
                   </td>
-                  <td colspan="2">
-                    <a class="timeline-bar bar-blue" href="week11.html">
-                      <strong>搜索框动画 / 任务保活 / 商业化小狗</strong>
-                    </a>
-                  </td>
-                  <td colspan="2">
-                    <a class="timeline-bar bar-violet" href="week13.html">
-                      <strong>新思考状态 / 魔法色适配 / 形象转场</strong>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    <a class="timeline-bar bar-violet" href="week14.html" data-thumbnail="images/W14/头部文字链bg_6.mp4" data-thumbnail-type="video">
+                      <strong>思考状态与形象转场</strong>
                     </a>
                   </td>
                   <td>
-                    <a class="timeline-bar bar-pink" href="week15.html">
+                    <a class="timeline-bar bar-pink" href="week15.html" data-thumbnail="images/W15/1.mp4" data-thumbnail-type="video">
                       <strong>免费听小狗彩色应用</strong>
                     </a>
                   </td>
                 </tr>
+
                 <tr>
-                  <th scope="row">歌词页与音画互动</th>
-                  <td colspan="6"></td>
-                  <td colspan="4">
-                    <a class="timeline-bar bar-blue" href="week10.html">
-                      <strong>歌词页动效探索 / 创意歌词页 / 在线编辑器 / 彩蛋设计 / 动画优化</strong>
+                  <th scope="row">V22 改版</th>
+                  <td colspan="3"></td>
+                  <td>
+                    <a class="timeline-bar bar-green" href="week4.html" data-thumbnail="images/前六周缩略图/W4/页面.png" data-thumbnail-type="image">
+                      <strong>页面改版与播放页探索</strong>
                     </a>
                   </td>
-                  <td></td>
-                  <td colspan="2">
-                    <a class="timeline-bar bar-green" href="week12.html">
-                      <strong>概念版创意歌词页 / 歌手彩蛋 / PC 端延续</strong>
+                  <td>
+                    <a class="timeline-bar bar-green" href="week5.html" data-thumbnail="images/前六周缩略图/W5/页面.png" data-thumbnail-type="image">
+                      <strong>UI 视觉系统 / 网格层级 / 组件复用</strong>
                     </a>
                   </td>
-                  <td colspan="2">
-                    <a class="timeline-bar bar-blue" href="week15.html">
+                  <td>
+                    <a class="timeline-bar bar-violet" href="week6.html" data-thumbnail="images/前六周缩略图/W6/页面2.png" data-thumbnail-type="image">
+                      <strong>页面视觉延展 / 版式探索</strong>
+                    </a>
+                  </td>
+                  <td>
+                    <a class="timeline-bar bar-pink" href="index.html" data-thumbnail="images/W7/2.png" data-thumbnail-type="image">
+                      <strong>酷狗 V22 改版页面延展</strong>
+                    </a>
+                  </td>
+                  <td colspan="8"></td>
+                </tr>
+
+                <tr>
+                  <th scope="row">播放器与歌词页</th>
+                  <td colspan="7"></td>
+                  <td>
+                    <a class="timeline-bar bar-violet" href="week8.html" data-thumbnail="images/W8/1.mp4" data-thumbnail-type="video">
+                      <strong>歌词页动效探索</strong>
+                    </a>
+                  </td>
+                  <td>
+                    <a class="timeline-bar bar-green" href="week9.html" data-thumbnail="images/W9/2.mp4" data-thumbnail-type="video">
+                      <strong>歌词页彩蛋与互动</strong>
+                    </a>
+                  </td>
+                  <td>
+                    <a class="timeline-bar bar-blue" href="week10.html" data-thumbnail="images/W10/4.mp4" data-thumbnail-type="video">
+                      <strong>歌词页 UI 与背景颜色优化</strong>
+                    </a>
+                  </td>
+                  <td>
+                    <a class="timeline-bar bar-green" href="week12.html" data-thumbnail="images/W12/0.png" data-thumbnail-type="image">
+                      <strong>概念版创意歌词页</strong>
+                    </a>
+                  </td>
+                  <td colspan="3"></td>
+                  <td>
+                    <a class="timeline-bar bar-blue" href="week15.html" data-thumbnail="images/W15/4.mp4" data-thumbnail-type="video">
                       <strong>魔法色适配 / 自动取色 / 自适应歌词页编辑器</strong>
                     </a>
                   </td>
                 </tr>
-                <tr>
-                  <th scope="row">工具与网页工作流</th>
-                  <td colspan="4"></td>
+
+                <tr class="timeline-text-row">
+                  <th scope="row">发现与创意</th>
                   <td colspan="2">
+                    <a class="timeline-bar bar-pink" href="week1.html">
+                      <strong>品牌理解 / Agent 案例观察 / 音乐产品调研</strong>
+                    </a>
+                  </td>
+                  <td colspan="2">
+                    <a class="timeline-bar bar-blue" href="week3.html">
+                      <strong>AE 抠像 / 透明序列帧 / PAG 导出</strong>
+                    </a>
+                  </td>
+                  <td></td>
+                  <td>
                     <a class="timeline-bar bar-violet" href="week6.html">
                       <strong>AI 快速出草图 / 页面搭建</strong>
                     </a>
                   </td>
                   <td>
-                    <a class="timeline-bar bar-violet" href="index.html">
-                      <strong>Web to Figma / Figma to HTML</strong>
+                    <a class="timeline-bar bar-pink" href="index.html" data-thumbnail="images/W7/3.mp4" data-thumbnail-type="video">
+                      <strong>AI Hackathon / 车机端 AI 乐评播客 / Web ↔ Figma</strong>
                     </a>
                   </td>
-                  <td colspan="2">
-                    <a class="timeline-bar bar-violet" href="week8.html">
+                  <td>
+                    <a class="timeline-bar bar-violet" href="week8.html" data-thumbnail="images/W8/0.mp4" data-thumbnail-type="video">
                       <strong>歌词页编辑器 / 同步动效搭建</strong>
                     </a>
                   </td>
+                  <td></td>
                   <td>
                     <a class="timeline-bar bar-violet" href="week10.html">
-                      <strong>动画拆分阶段 / 提高 AI 制作复用性</strong>
+                      <strong>产品讨论 / 竞品分析 / 动画拆分与 AI 复用</strong>
                     </a>
                   </td>
-                  <td colspan="3"></td>
-                  <td colspan="2">
-                    <a class="timeline-bar bar-violet" href="week15.html">
-                      <strong>Shader 魔法色 / 自动取色 / 参数化编辑器</strong>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">产品概念与体验创新</th>
-                  <td colspan="6"></td>
                   <td>
-                    <a class="timeline-bar bar-pink" href="index.html">
-                      <strong>AI Hackathon / 车机端 AI 乐评播客</strong>
+                    <a class="timeline-bar bar-blue" href="week11.html">
+                      <strong>透明底兼容 / PAG 重新交付</strong>
                     </a>
                   </td>
                   <td></td>
                   <td>
-                    <a class="timeline-bar bar-green" href="week9.html">
-                      <strong>听歌彩蛋互动设计</strong>
+                    <a class="timeline-bar bar-green" href="week13.html" data-thumbnail="images/W13/5.png" data-thumbnail-type="image">
+                      <strong>PC 端宣推概念方案</strong>
                     </a>
                   </td>
                   <td>
-                    <a class="timeline-bar bar-green" href="week10.html">
-                      <strong>产品讨论 / 竞品差异 / 汇报逻辑理解</strong>
-                    </a>
-                  </td>
-                  <td colspan="2">
-                    <a class="timeline-bar bar-blue" href="week12.html">
-                      <strong>任务保活 / 商业化诊断动画</strong>
+                    <a class="timeline-bar bar-violet" href="week14.html" data-thumbnail="images/W14/翻牌两次.mp4" data-thumbnail-type="video">
+                      <strong>商业化诊断页面动效</strong>
                     </a>
                   </td>
                   <td>
-                    <a class="timeline-bar bar-green" href="week13.html">
-                      <strong>PC 端宣推概念</strong>
-                    </a>
-                  </td>
-                  <td></td>
-                  <td>
-                    <a class="timeline-bar bar-pink" href="week15.html">
-                      <strong>免费听小狗应用演示</strong>
+                    <a class="timeline-bar bar-blue" href="week15.html" data-thumbnail="images/W15/3.png" data-thumbnail-type="image">
+                      <strong>Shader 魔法色 / 参数化编辑器</strong>
                     </a>
                   </td>
                 </tr>
@@ -366,6 +357,6 @@
       </div>
     </footer>
 
-    <script src="script.js?v=20260626-1710"></script>
+    <script src="script.js?v=20260822-thumbnails"></script>
   </body>
 </html>

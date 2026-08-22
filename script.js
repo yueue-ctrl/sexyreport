@@ -155,3 +155,134 @@ window.addEventListener(
 );
 
 updateHeaderVisibility();
+
+const thumbnailToggle = document.querySelector("#thumbnail-toggle");
+const timelineTable = document.querySelector(".timeline-table");
+const timelineScroll = document.querySelector(".timeline-scroll");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+let thumbnailObserver = null;
+const visibleThumbnailVideos = new Map();
+const maxPlayingThumbnails = 4;
+
+function stopThumbnailVideo(video, releaseSource = false) {
+  video.pause();
+  if (!releaseSource) return;
+
+  video.removeAttribute("src");
+  video.load();
+  video.dataset.loaded = "false";
+}
+
+function loadThumbnailVideo(video) {
+  if (video.dataset.loaded === "true") return;
+
+  video.src = video.dataset.src;
+  video.dataset.loaded = "true";
+  video.load();
+}
+
+function updatePlayingThumbnailVideos() {
+  const videosToPlay = reduceMotion.matches
+    ? []
+    : [...visibleThumbnailVideos.entries()]
+        .sort((first, second) => second[1] - first[1])
+        .slice(0, maxPlayingThumbnails)
+        .map(([video]) => video);
+
+  visibleThumbnailVideos.forEach((_, video) => {
+    if (videosToPlay.includes(video)) {
+      video.play().catch(() => {});
+    } else {
+      video.pause();
+    }
+  });
+}
+
+function createTimelineThumbnails() {
+  if (!timelineTable) return;
+
+  timelineTable.querySelectorAll(".timeline-bar").forEach((bar) => {
+    if (bar.querySelector(".timeline-thumbnail")) return;
+
+    const label = bar.querySelector("strong")?.textContent.trim() || "查看项目";
+    const source = bar.dataset.thumbnail;
+    bar.setAttribute("aria-label", label);
+
+    if (!source || bar.closest(".timeline-text-only")) return;
+
+    bar.classList.add("has-thumbnail");
+
+    if (bar.dataset.thumbnailType === "video") {
+      const video = document.createElement("video");
+      video.className = "timeline-thumbnail";
+      video.dataset.src = source;
+      video.dataset.loaded = "false";
+      video.muted = true;
+      video.loop = true;
+      video.playsInline = true;
+      video.preload = "none";
+      video.setAttribute("aria-hidden", "true");
+      bar.append(video);
+      return;
+    }
+
+    const image = document.createElement("img");
+    image.className = "timeline-thumbnail";
+    image.src = source;
+    image.alt = "";
+    image.loading = "lazy";
+    image.decoding = "async";
+    bar.append(image);
+  });
+}
+
+function observeThumbnailVideos() {
+  if (!timelineTable || !timelineScroll) return;
+
+  thumbnailObserver?.disconnect();
+  thumbnailObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const video = entry.target;
+        if (!entry.isIntersecting) {
+          visibleThumbnailVideos.delete(video);
+          video.pause();
+          return;
+        }
+
+        loadThumbnailVideo(video);
+        visibleThumbnailVideos.set(video, entry.intersectionRatio);
+      });
+      updatePlayingThumbnailVideos();
+    },
+    { root: timelineScroll, rootMargin: "80px", threshold: 0.12 },
+  );
+
+  timelineTable.querySelectorAll("video.timeline-thumbnail").forEach((video) => thumbnailObserver.observe(video));
+}
+
+function setThumbnailMode(isEnabled) {
+  if (!thumbnailToggle || !timelineTable) return;
+
+  thumbnailToggle.setAttribute("aria-checked", String(isEnabled));
+  timelineTable.classList.toggle("is-thumbnail-mode", isEnabled);
+
+  if (isEnabled) {
+    createTimelineThumbnails();
+    observeThumbnailVideos();
+  } else {
+    thumbnailObserver?.disconnect();
+    visibleThumbnailVideos.clear();
+    timelineTable.querySelectorAll("video.timeline-thumbnail").forEach((video) => stopThumbnailVideo(video, true));
+  }
+}
+
+if (thumbnailToggle && timelineTable) {
+  thumbnailToggle.addEventListener("click", () => {
+    setThumbnailMode(thumbnailToggle.getAttribute("aria-checked") !== "true");
+  });
+
+  reduceMotion.addEventListener?.("change", () => {
+    if (thumbnailToggle.getAttribute("aria-checked") === "true") updatePlayingThumbnailVideos();
+  });
+}
